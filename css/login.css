@@ -138,3 +138,15 @@ label
         	margin-left:10px;
         	margin-right:10px;
         }
+        .register-login-content{
+            height: 350px;
+        }
+        .register-form-control{
+            width: 150px !important;
+        }
+        .btn-right{
+            margin-left: 45px;
+        }
+        .registe-login-content{
+            height: 300px;
+        }
