@@ -12,7 +12,7 @@ $(document).ready(function(){
 		}
 		$.ajax({
 			type: "POST",
-			url: "http://localhost:8080/userLogin/login",
+			url: prefix + "userLogin/login",
 			dataType:"json",
 			contentType:"application/json",
 			data: JSON.stringify(data),

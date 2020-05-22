@@ -16,7 +16,7 @@ $(document).ready(function(){
 		}
 		$.ajax({
 			type: "POST",
-			url: "http://localhost:8080/system/user/editPass",
+			url: prefix + "system/user/editPass",
 			dataType:"json",
 			contentType:"application/json",
 			data: JSON.stringify(data),

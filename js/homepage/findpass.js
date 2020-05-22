@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var repassword = $("#repassword").val();
 		$.ajax({
 			type: "GET",
-			url: "http://localhost:8080/userLogin/getCode",
+			url: prefix + "userLogin/getCode",
 			data:"studentNumber=" + studentNumber,
 			success: function (response) {
 				if (response.code == 0){
@@ -44,7 +44,7 @@ $(document).ready(function(){
 		}
 		$.ajax({
 			type: "POST",
-			url: "http://localhost:8080/userLogin/reCode",
+			url: prefix + "userLogin/checkCode",
 			dataType:"json",
 			contentType:"application/json",
 			data: JSON.stringify(data),
