@@ -33,6 +33,9 @@ $(document).ready(function(){
 		if(password!="" && password.length < 6){
 			alert("密码不能小于6位！");
 		}
+		if(password.value != repassword.value){
+			alert("两次输入的密码不相同！");
+		}
 		var data = {
 			"studentNumber": studentNumber,
 			"password": password,
@@ -57,41 +60,41 @@ $(document).ready(function(){
 			},
 		});
 	});
-
-
-
-	function check(){
-		var studentNumber=document.getElementById("studentNumber");
-		var password=document.getElementById("password");
-		var repassword=document.getElementById("repassword");
-		var methodCode=document.getElementById("methodCode");
-		if(studentNumber.value == "" || studentNumber.value.length < 6){
-			alert("名称为空，或长度不足！");
-			studentNumber.select();
-			studentNumber.focus();
-			return false;
-		}
-		if(password.value == ""){
-			alert("密码不能为空！");
-			document.modifyPassword.password.focus();
-			return false;
-		}
-		if(repassword.value == ""){
-			alert("密码确认不能为空！");
-			document.modifyPassword.repassword.focus();
-			return false;
-		}
-		if(password.value != repassword.value){
-			alert("两次输入的密码不相同！");
-			document.modifyPassword.password.focus();
-			return false;
-		}
-		if(methodCode.value != methodCode.value){
-			alert("两次输入的密码不相同！");
-			document.modifyPassword.password.focus();
-			return false;
-		}
-		return true;
-	}
+	//
+	//
+	//
+	// function check(){
+	// 	var studentNumber=document.getElementById("studentNumber");
+	// 	var password=document.getElementById("password");
+	// 	var repassword=document.getElementById("repassword");
+	// 	var methodCode=document.getElementById("methodCode");
+	// 	if(studentNumber.value == "" || studentNumber.value.length < 6){
+	// 		alert("名称为空，或长度不足！");
+	// 		studentNumber.select();
+	// 		studentNumber.focus();
+	// 		return false;
+	// 	}
+	// 	if(password.value == ""){
+	// 		alert("密码不能为空！");
+	// 		document.modifyPassword.password.focus();
+	// 		return false;
+	// 	}
+	// 	if(repassword.value == ""){
+	// 		alert("密码确认不能为空！");
+	// 		document.modifyPassword.repassword.focus();
+	// 		return false;
+	// 	}
+	// 	if(password.value != repassword.value){
+	// 		alert("两次输入的密码不相同！");
+	// 		document.modifyPassword.password.focus();
+	// 		return false;
+	// 	}
+	// 	if(methodCode.value != methodCode.value){
+	// 		alert("两次输入的密码不相同！");
+	// 		document.modifyPassword.password.focus();
+	// 		return false;
+	// 	}
+	// 	return true;
+	// }
 
 });
